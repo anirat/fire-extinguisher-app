@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inspector - ตรวจสอบถังดับเพลิง</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>หน้าสำหรับผู้ตรวจสอบ (Inspector)</h1>
+        <p>คลิกที่หมุดเพื่อเริ่มการตรวจสอบ</p>
+
+        <div id="map-container">
+            <img id="floorplanImage" src="" alt="แผนผังจะปรากฏที่นี่">
+            </div>
+        <div class="nav-links">
+            <a href="admin.html">ไปหน้า Admin</a> | <a href="dashboard.html">ไปหน้าสรุปผล</a> | <a href="history.html">ดูประวัติทั้งหมด</a>
+        </div>
+    </div>
+
+    <div id="inspectionModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <h2>แบบฟอร์มตรวจสอบ (รหัส: <span id="formPinId"></span>)</h2>
+             <select id="inspectorName" style="width: 100%; padding: 10px; margin-bottom: 15px; border: 1px solid #ddd; border-radius: 4px; font-size: 16px;">
+    <option value="" disabled selected>— กรุณาเลือกผู้ตรวจสอบ —</option>
+    <option value="นายเฉลิมเกียรติ  คำเจริญ">นายเฉลิมเกียรติ  คำเจริญ</option>
+    <option value="น.ส.ละออง  สิงห์บุตร">น.ส.ละออง  สิงห์บุตร</option>
+    <option value="น.ส.ภัณฑิลา  อิ่นรอง">น.ส.ภัณฑิลา  อิ่นรอง</option>
+    <option value="น.ส.พิมพ์ชนก  อ่ำพุทรา">น.ส.พิมพ์ชนก  อ่ำพุทรา</option>
+    <option value="น.ส.ศิริประภา  หนองน้ำขาว">น.ส.ศิริประภา  หนองน้ำขาว</option>
+    <option value="น.ส.สุภนิดา  รังษี">น.ส.สุภนิดา  รังษี</option>
+    <option value="น.ส.กนกวรรณ  สุขกุล">น.ส.กนกวรรณ  สุขกุล</option>
+    </select>
+            <form id="inspectionForm">
+                <div class="form-item">
+                    <label>1. สภาพถัง</label>
+                    <div>
+                        <input type="radio" name="q1" value="ok" checked> ปกติ
+                        <input type="radio" name="q1" value="fail"> ผิดปกติ
+                    </div>
+                </div>
+                <div class="form-item">
+                    <label>2. เกจวัดแรงดัน</label>
+                    <div>
+                        <input type="radio" name="q2" value="ok" checked> ปกติ
+                        <input type="radio" name="q2" value="fail"> ผิดปกติ
+                    </div>
+                </div>
+                <div class="form-item">
+                    <label>3. สลัก</label>
+                    <div>
+                        <input type="radio" name="q3" value="ok" checked> ปกติ
+                        <input type="radio" name="q3" value="fail"> ผิดปกติ
+                    </div>
+                </div>
+                 <div class="form-item">
+                    <label>4. สายฉีด</label>
+                    <div>
+                        <input type="radio" name="q4" value="ok" checked> ปกติ
+                        <input type="radio" name="q4" value="fail"> ผิดปกติ
+                    </div>
+                </div>
+                 <div class="form-item">
+                    <label>5. ความสะอาด</label>
+                    <div>
+                        <input type="radio" name="q5" value="ok" checked> ปกติ
+                        <input type="radio" name="q5" value="fail"> ผิดปกติ
+                    </div>
+                </div>
+                 <div class="form-item">
+                    <label>6. คว่ำถังเช็คสารเคมี</label>
+                    <div>
+                        <input type="radio" name="q6" value="ok" checked> ปกติ
+                        <input type="radio" name="q6" value="fail"> ผิดปกติ
+                    </div>
+                </div>
+                <button type="submit">บันทึกผลการตรวจ</button>
+            </form>
+            <div id="inspectionResult"></div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
