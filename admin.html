@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin - ปักหมุดถังดับเพลิง</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>หน้าสำหรับผู้ดูแล (Admin)</h1>
+        <p>ปักหมุดตำแหน่งติดตั้งถังดับเพลิง</p>
+
+        <div class="controls">
+            <input type="text" id="buildingName" placeholder="ชื่ออาคาร">
+            <input type="text" id="floorNumber" placeholder="ชั้น">
+            <label for="floorplanUpload" class="upload-btn">เลือกรูปแผนผัง</label>
+            <input type="file" id="floorplanUpload" accept="image/*" style="display: none;">
+        </div>
+
+        <div id="map-container">
+            <img id="floorplanImage" src="" alt="กรุณาอัปโหลดแผนผัง">
+            </div>
+         <div class="nav-links">
+            <a href="inspector.html">ไปหน้าผู้ตรวจสอบ</a> | <a href="dashboard.html">ไปหน้าสรุปผล</a> | <a href="history.html">ดูประวัติทั้งหมด</a>
+        </div>
+    </div>
+
+    <div id="pinModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <h2>รายละเอียดถังดับเพลิง</h2>
+            <input type="text" id="pinId" placeholder="รหัสถัง (เช่น F-01)">
+            <input type="text" id="pinLocation" placeholder="จุดติดตั้ง (เช่น หน้าห้องประชุม)">
+            <input type="text" id="pinDepartment" placeholder="หน่วยงานรับผิดชอบ">
+            <textarea id="pinDetails" placeholder="รายละเอียดเพิ่มเติม..."></textarea>
+            <button id="savePinButton">บันทึกหมุด</button>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,144 @@
+body {
+    font-family: 'Kanit', sans-serif; /* ใช้ฟอนต์ที่รองรับภาษาไทย */
+    background-color: #f4f4f4;
+    color: #333;
+    margin: 0;
+    padding: 20px;
+}
+
+.container {
+    max-width: 900px;
+    margin: auto;
+    background: #fff;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    border-radius: 8px;
+}
+
+h1, h2 {
+    color: #c0392b; /* Red theme */
+}
+
+/* Map and Pins */
+#map-container {
+    position: relative;
+    border: 2px dashed #ddd;
+    min-height: 400px;
+    margin-top: 20px;
+    overflow: hidden;
+}
+
+#floorplanImage {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.pin {
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    background-color: #e74c3c; /* Bright Red */
+    border-radius: 50% 50% 50% 0;
+    transform: rotate(-45deg);
+    border: 2px solid #fff;
+    cursor: pointer;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.3);
+}
+
+.pin.status-ok { background-color: #2ecc71; } /* Green */
+.pin.status-fail { background-color: #e74c3c; } /* Red */
+
+
+/* Modal Windows */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0; top: 0;
+    width: 100%; height: 100%;
+    background-color: rgba(0,0,0,0.5);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background-color: #fff;
+    padding: 25px;
+    border-radius: 5px;
+    width: 90%;
+    max-width: 500px;
+    position: relative;
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px; right: 20px;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* Forms and Buttons */
+input[type="text"], textarea {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+button, .upload-btn {
+    background-color: #c0392b;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover, .upload-btn:hover {
+    background-color: #a93226;
+}
+
+#inspectionForm .form-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 0;
+    border-bottom: 1px solid #eee;
+}
+
+#inspectionResult {
+    margin-top: 15px;
+    font-size: 1.2em;
+    font-weight: bold;
+    padding: 10px;
+    text-align: center;
+    border-radius: 4px;
+}
+.pass { background-color: #2ecc71; color: white; }
+.fail { background-color: #e74c3c; color: white; }
+
+/* Dashboard Table */
+#dashboardTable {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+#dashboardTable th, #dashboardTable td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+#dashboardTable th {
+    background-color: #f2f2f2;
+    color: #c0392b;
+}
+.status-cell-ok { color: #27ae60; font-weight: bold; }
+.status-cell-fail { color: #c0392b; font-weight: bold; }
+
+.nav-links {
+    text-align: center;
+    margin-top: 20px;
+}
