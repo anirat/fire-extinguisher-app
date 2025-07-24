@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const SCRIPT_URL = "YOUR_GOOGLE_SCRIPT_URL_HERE"; // ใช้ URL เดิมของคุณ
+    const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbwCvRfDg1XfEwEX3Urc2uvCAE2TVjRw3PfvF-qaVxPSDKz-4BepFE8ldrAio6HpGwIs/exec"; // ใช้ URL เดิมของคุณ
 
     const mapContainer = document.getElementById('map-container');
     const floorplanImage = document.getElementById('floorplanImage');
